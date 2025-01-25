@@ -7,7 +7,7 @@ export const Layout = () => {
         <div>
             <header className="header">
                 <div className="logo">
-                    <span className="logo-text">KOMAROVSKYI DANIIL</span>
+                    <span className="logo-text">PORTFOLIO</span>
                 </div>
                 <nav className="navbar">
                     <ul className="nav-list">

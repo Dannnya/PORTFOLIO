@@ -1,4 +1,3 @@
-/* Основний стиль для хедера */
 .header {
     display: flex;
     flex-direction: column;
@@ -20,13 +19,13 @@
 
 /* Логотип */
 .logo {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     text-align: center;
     /* Центрування тексту логотипу */
 }
 
 .logo-text {
-    color: #FFD700;
+    color: #EAE112;
     /* Жовтий колір для логотипу */
     font-weight: bold;
     font-size: 24px;
@@ -73,12 +72,12 @@
 }
 
 .nav-link:hover {
-    color: #FFD700;
+    color: #EAE112;
     /* Жовтий колір при наведенні */
 }
 
 .nav-link.active {
-    color: #FFD700;
+    color: #EAE112;
     /* Жовтий колір для активного пункту */
 }
 
