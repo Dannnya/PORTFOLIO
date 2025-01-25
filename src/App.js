@@ -3,7 +3,7 @@ import { HomePage } from './pages/HomePage';
 import { AboutMePage } from './pages/AboutMePage';
 import { ContactPage } from './pages/ContactPage';
 import { PortfolioPage } from './pages/PortfolioPage';
-import { Layout } from './components/Layout'
+import { Layout } from './components/Layout';
 export const App = () => {
   return (
       <Routes>

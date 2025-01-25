@@ -18,22 +18,22 @@ export const Layout = () => {
                                     isActive ? 'nav-link active' : 'nav-link'
                                 }
                             >
-                                HOME
+                                {"<"} HOME {"/>"}
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to="/about" className="nav-link">
-                                ABOUT ME
+                                {"<"} ABOUT ME {"/>"}
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to="/portfolio" className="nav-link">
-                                PORTFOLIO
+                                {"<"} PORTFOLIO {"/>"}
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink to="/contact" className="nav-link">
-                                CONTACT
+                                {"<"} CONTACT {"/>"}
                             </NavLink>
                         </li>
                     </ul>
