@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import '../../src/css/Layout.css';
+import '../../src/scss/Layout.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'; // Import brand icons
 
