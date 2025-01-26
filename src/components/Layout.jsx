@@ -1,5 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import '../../src/css/Layout.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'; // Import brand icons
 
 export const Layout = () => {
     return (
@@ -38,6 +40,28 @@ export const Layout = () => {
                         </li>
                     </ul>
                 </nav>
+                <ul className="contact">
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faInstagram} size='2x'/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/?lang=uk&mx=2" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faTwitter} size='2x'/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/daniil-komarovskiy-b396822a1/" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedinIn} size='2x'/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Dannnya" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faGithub} size='2x'/>
+                        </a>
+                    </li>
+                </ul>
             </header>
             <main>
                 <Outlet />

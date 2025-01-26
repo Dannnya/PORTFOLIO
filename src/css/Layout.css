@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 .header {
     display: flex;
     flex-direction: column;
@@ -27,11 +29,13 @@
 .logo-text {
     color: #EAE112;
     /* Жовтий колір для логотипу */
-    font-weight: bold;
+    font-weight: 800;
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
+    font-family: "Ubuntu", serif;   
+    font-optical-sizing: auto;
 }
 
 /* Меню навігації */
@@ -86,4 +90,37 @@ main {
     margin-left: 320px;
     /* Відступ для основного контенту */
     padding: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Центрування іконок */
+    padding: 20px;
+}
+
+.contact li {
+    margin: 0 10px;
+    text-decoration-line: none;
+}
+
+.contact a {
+    color: white;
+}
+
+.contact a:hover {
+    color: #EAE112;
+    /* Жовтий колір при наведенні */
+}
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-linkedin-in,
+.fa-github {
+    font-size: 30px;
+}
+
+ul {
+    list-style: none;
 }
