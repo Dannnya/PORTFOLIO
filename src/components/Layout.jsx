@@ -9,7 +9,7 @@ export const Layout = () => {
         <div>
             <header className="header">
                 <div className="logo">
-                    <span className="logo-text">PORTFOLIO</span>
+                    <span className="logo-text">{'{ '}PORTFOLIO{' }'}</span>
                 </div>
                 <nav className="navbar">
                     <ul className="nav-list">
@@ -42,7 +42,7 @@ export const Layout = () => {
                 </nav>
                 <ul className="contact">
                     <li>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/mind_in_awe_/#" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faInstagram} size='2x'/>
                         </a>
                     </li>
@@ -58,7 +58,7 @@ export const Layout = () => {
                     </li>
                     <li>
                         <a href="https://github.com/Dannnya" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faGithub} size='2x'/>
+                            <FontAwesomeIcon icon={faGithub} size='x'/>
                         </a>
                     </li>
                 </ul>

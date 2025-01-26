@@ -89,14 +89,12 @@
 main {
     margin-left: 320px;
     /* Відступ для основного контенту */
-    padding: 20px;
 }
 
 .contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* Центрування іконок */
     padding: 20px;
 }
 
