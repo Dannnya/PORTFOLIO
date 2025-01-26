@@ -4,15 +4,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Вирівнює логотип і навігацію по центру */
     justify-content: center;
-    /* Вертикальне вирівнювання всередині чорного блоку */
     width: 300px;
-    /* Збільшено ширину для комфортного відображення тексту */
     height: 100vh;
     padding: 20px;
     background-color: #0E0E0E;
-    /* Чорний фон */
     color: white;
     position: fixed;
     top: 0;
@@ -21,11 +17,9 @@
     .logo {
         margin-bottom: 70px;
         text-align: center;
-        /* Центрування тексту логотипу */
 
         .logo-text {
             color: #EAE112;
-            /* Жовтий колір для логотипу */
             font-weight: 800;
             font-size: 24px;
             text-transform: uppercase;
@@ -40,7 +34,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Центрує всі пункти меню */
         width: 100%;
 
         .nav-list {
@@ -50,32 +43,25 @@
 
             .nav-item {
                 margin-bottom: 30px;
-                /* Збільшено відступи між пунктами для кращого вигляду */
 
                 .nav-link {
                     text-decoration: none;
                     color: white;
                     font-size: 18px;
-                    /* Збільшено розмір шрифту */
                     font-weight: 600;
                     text-transform: uppercase;
                     transition: color 0.3s ease;
                     display: block;
                     text-align: center;
-                    /* Центрує текст всередині пункту */
                     padding: 10px 0;
-                    /* Збільшено висоту фону */
                     width: 100%;
-                    /* Ширина пункту займає весь блок */
 
                     &:hover {
                         color: #EAE112;
-                        /* Жовтий колір при наведенні */
                     }
 
                     &.active {
                         color: #EAE112;
-                        /* Жовтий колір для активного пункту */
                     }
                 }
             }
@@ -97,7 +83,6 @@
 
                 &:hover {
                     color: #EAE112;
-                    /* Жовтий колір при наведенні */
                 }
             }
         }
@@ -113,7 +98,6 @@
 
 main {
     margin-left: 320px;
-    /* Відступ для основного контенту */
 }
 
 ul {
