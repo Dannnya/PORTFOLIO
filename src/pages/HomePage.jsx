@@ -14,5 +14,3 @@ export const HomePage = () => {
     </div>
   );
 }
-
-//    background: url('../assets/Danya.jpg') no-repeat center center;

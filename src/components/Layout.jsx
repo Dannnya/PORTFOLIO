@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import '../../src/scss/Layout.css';
+import '../../src/scss/Layout.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'; // Import brand icons
+import { faInstagram, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export const Layout = () => {
     return (
