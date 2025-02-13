@@ -1,14 +1,18 @@
 .info {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
+    gap: 90px;
+    margin-top: 10px;
 }
 
 .info-photo{
     border-radius: 30px;
+    padding: 0;;
+    margin-left: 47px;
 }
 
-.title-about-me {
-    text-align: end;
+.title-about-me, .title-text {
+    text-align: center;
 }
 
 .stack-photo {
@@ -17,4 +21,46 @@
 
 .stack-title {
     color: #EAE112;
+    margin-left: 10px;
+}
+
+.stack { 
+    margin-top: 15px;
+    margin-left: 37px;
+}
+
+.stack-photo {
+    display: flex;
+    gap:30px;
+}
+
+.name { 
+    color: #EAE112;
+    font-size: 23px;
+}
+
+.title-container { 
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.aboutme-text {
+    margin-top: 15px;
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.aboutme---text {
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.btn-download-cv {
+    margin-top: 5px;
+    background-color:#EAE112;
+    border-radius: 9px;
+    width: 130px;
+    height: 50px;
+    font-size: 15px;
+    cursor: pointer;
 }

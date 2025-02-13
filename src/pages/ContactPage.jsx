@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContactForm } from '../components/ContactForm';
-import '../scss/ContactPage.scss';
+import '../scss/Contact/ContactPage.scss';
 import phone from '../assets/phone.svg';
 
 export const ContactPage = () => {
