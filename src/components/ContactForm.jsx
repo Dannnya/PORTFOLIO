@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import '../scss/Contact/ContactForm.scss';
-import { ToastContainer, toast } from "react-toastify";
+import { useState } from 'react'; 
+import '../scss/Contact/ContactForm.scss'; 
+import { ToastContainer, toast } from "react-toastify"; 
 
 export const ContactForm = () => {
   const [user, setUser] = useState('');
@@ -92,10 +92,10 @@ export const ContactForm = () => {
       </button>
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
-        closeOnClick={false}
+        closeOnClick={true}
         rtl={false}
         pauseOnFocusLoss
         draggable

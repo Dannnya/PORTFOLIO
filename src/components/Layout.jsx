@@ -52,7 +52,7 @@ export const Layout = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/daniil-komarovskiy-b396822a1/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/daniil-komarovskyi-b396822a1/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faLinkedinIn} size='2x'/>
                         </a>
                     </li>

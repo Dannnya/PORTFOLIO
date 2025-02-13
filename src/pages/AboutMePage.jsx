@@ -15,9 +15,9 @@ export const AboutMePage = () => {
       <div className="title-container">
         <h1 className="title-about-me">ABOUT ME</h1>
         <p className="title-text">
-          Lorem ipsum dolor sit amet consectetur. Eget turpis nulla dignissim integer.
-          Quis tempus est quis <br /> sapien. Odio neque lectus posuere orci.
-          Turpis quis amet euismod vel scelerisque <br /> scelerisque.
+          Hi there. here you can find a little about me and my technical aspects, I am always happy to <br />
+          discuss the topic of web development, it will be useful to hear your opinion <br/>
+          in the form of feedback in the contacts section. <br/>
         </p>
       </div>
       <div className="info">
@@ -25,13 +25,16 @@ export const AboutMePage = () => {
         <div className="info-text">
           <h3 className="name">KOMAROVSKYI DANIIL</h3>
           <h3>FRONTEND DEVELOPER</h3>
-          <p className="aboutme-text"> Lorem ipsum dolor sit amet consectetur. Nunc suspendisse pulvinar orci viverra <br /> in massa nunc tristique.
-            Tempor interdum ac tempus sapien. Pulvinar <br /> consectetur lorem ligula morbi nec condimentum.
-            Urna sit semper integer <br />commodo non mauris dictum non.
+          <p className="aboutme-text"> 
+            I thrive at the intersection of creativity and technology.
+            As a Frontend Developer, <br/> I see coding not just  as a skill but as a way to bring ideas to life.
+            I enjoy crafting intuitive,  <br /> dynamic, and visually engaging web experiences that leave an impact. <br />
           </p>
-          <p className="aboutme---text"> Lorem ipsum dolor sit amet consectetur. Nunc suspendisse pulvinar orci viverra <br /> in massa nunc tristique.
-            Tempor interdum ac tempus sapien.
-            Pulvinar<br /> consectetur lorem ligula morbi
+          <p className="aboutme---text"> Curiosity drives me — I love diving deep into new technologies, experimenting with <br />
+            different approaches, and continuously refining my skills. <br/>
+            Every project I work on is a challenge that fuels my passion for problem-solving and innovation. <br />
+            <br/>
+            My approach is simple: make things work beautifully while keeping the code clean and scalable.
           </p>
           <a href="" download="CV">
             <button className="btn btn-download-cv" type="button"> Download CV </button>
@@ -53,4 +56,3 @@ export const AboutMePage = () => {
     </div>
   )
 };
-

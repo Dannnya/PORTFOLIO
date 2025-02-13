@@ -8,7 +8,11 @@ export const ContactPage = () => {
     <div className="contact-page">
       <div className="contact-section">
         <h1 className='title'>CONTACT</h1>
-          <p className='main-text'>Have a project in mind or just want to connect? <br/> I'm always open to discussing new opportunities, collaborations, or exciting ideas in  web development. <br/>Let’s build something great together</p>
+        <p className='main-text'>
+          Have a project in mind or just want to connect? <br /> 
+          I'm always open to discussing new opportunities, collaborations, or exciting ideas in  web development. <br />
+          Let’s build something great together
+        </p>
         <div className="contact-card">
           <div className="icon-container">
             <a href="tel: +38 068 017 2242">
