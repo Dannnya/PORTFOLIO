@@ -8,12 +8,8 @@ export const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   const displayMessage = () => {
-    toast('Thank you for your feedback !', {
+    toast(`Thank you ${ user } for your feedback !`, {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -22,7 +18,7 @@ export const ContactForm = () => {
       draggable: true,
       progress: undefined,
       theme: "dark",
-    } );
+    });
   }
   
   const handleChange = e => {
@@ -47,7 +43,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" autoComplete="off" onSubmit={handleSubmit}>
+    <form className="contact-form" autoComplete="off" onSubmit={ (e) => e.preventDefault() }>
       <div className="container">
         <div className="input-row">
           <input

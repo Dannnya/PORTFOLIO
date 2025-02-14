@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import '../../src/scss/Layout.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTelegram, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export const Layout = () => {
     return (
@@ -48,7 +48,7 @@ export const Layout = () => {
                     </li>
                     <li>
                         <a href="https://x.com/?lang=uk&mx=2" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faTwitter} size='2x'/>
+                            <FontAwesomeIcon icon={faTelegram} size='2x'/>
                         </a>
                     </li>
                     <li>
