@@ -1,29 +1,39 @@
+$background-color: #141313;
+$text-color: rgb(197, 192, 192);
+$card-bg: #0E0E0E;
+$font-size-base: 19px;
+$line-height-base: 23px;
+
 body {
-   background-color: #141313;
+    background-color: $background-color;
 }
 
 a {
-    color: rgb(197, 192, 192);
+    color: $text-color;
     text-decoration: none;
 }
-.contact-section {
-    margin-top: 50px;
-    text-align: center;
-}
 
-.contact-card {
-    padding: 10px 0 5px 0;
-    width: 270px;
-    background-color: #0E0E0E;
-    border-radius: 10%;
-    margin: auto;
-    margin-top: 15px;
-}
+.contact-page {
+    .contact-section {
+        margin-top: 50px;
+        text-align: center;
 
-.main-text { 
-    line-height: 23px;
-    font-size: 19px;
-}
-.title {
-    text-align: center; 
+        .main-text {
+            line-height: $line-height-base;
+            font-size: $font-size-base;
+        }
+
+        .contact-card {
+            padding: 10px 0 5px 0;
+            width: 270px;
+            background-color: $card-bg;
+            border-radius: 10%;
+            margin: auto;
+            margin-top: 15px;
+        }
+    }
+
+    .title {
+        text-align: center;
+    }
 }

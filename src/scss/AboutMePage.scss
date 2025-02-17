@@ -1,66 +1,82 @@
-.info {
-    display: flex;
-    justify-content: start;
-    gap: 90px;
-    margin-top: 10px;
-}
+$primary-color: #EAE112;
+$font-size-base: 17px;
+$line-height-base: 23px;
 
-.info-photo{
-    border-radius: 30px;
-    padding: 0;;
-    margin-left: 47px;
-}
+.container-about {
+    .title-container {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        text-align: center;
 
-.title-about-me, .title-text {
-    text-align: center;
-}
+        .title-about-me {
+            text-align: center;
+        }
 
-.stack-photo {
-    margin-right: 10px;
-}
+        .title-text {
+            text-align: center;
+        }
+    }
 
-.stack-title {
-    color: #EAE112;
-    margin-left: 10px;
-}
+    .info {
+        display: flex;
+        justify-content: start;
+        gap: 90px;
+        margin-top: 10px;
 
-.stack { 
-    margin-top: 15px;
-    margin-left: 37px;
-}
+        .info-photo {
+            border-radius: 30px;
+            margin-left: 47px;
+            padding: 0;
+        }
 
-.stack-photo {
-    display: flex;
-    gap:30px;
-}
+        .info-text {
+            .name {
+                color: $primary-color;
+                font-size: 23px;
+            }
 
-.name { 
-    color: #EAE112;
-    font-size: 23px;
-}
+            h3 {
+                margin-bottom: 10px;
+            }
 
-.title-container { 
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
+            .aboutme-text,
+            .aboutme---text {
+                margin-top: 15px;
+                font-size: $font-size-base;
+                line-height: $line-height-base;
+            }
+        }
+    }
 
-.aboutme-text {
-    margin-top: 15px;
-    font-size: 17px;
-    line-height: 23px;
-}
+    .stack {
+        margin-top: 15px;
+        margin-left: 37px;
 
-.aboutme---text {
-    font-size: 17px;
-    line-height: 23px;
-}
+        .stack-title {
+            color: $primary-color;
+            margin-left: 10px;
+        }
 
-.btn-download-cv {
-    margin-top: 5px;
-    background-color:#EAE112;
-    border-radius: 9px;
-    width: 130px;
-    height: 50px;
-    font-size: 15px;
-    cursor: pointer;
+        .stack-photo {
+            display: flex;
+            gap: 30px;
+            margin-right: 10px;
+        }
+    }
+
+    .btn-download-cv {
+        margin-top: 5px;
+        background-color: $primary-color;
+        border-radius: 9px;
+        width: 130px;
+        height: 50px;
+        font-size: 15px;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
 }
