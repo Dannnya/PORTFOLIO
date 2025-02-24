@@ -6,7 +6,7 @@ import react from '../assets/react.png';
 import redux from '../assets/redux.png';
 import git from '../assets/git.png';
 import sass from '../assets/sass1.png';
-import photo from '../assets/Danyaaa.jpg';
+import photo from '../assets/photo.jpg';
 import '../scss/AboutMePage.scss';
 
 export const AboutMePage = () => {

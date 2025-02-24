@@ -48,4 +48,8 @@ $button-text-color: #0E0E0E;
         border: none;
         cursor: pointer;
     }
+
+  .error-placeholder::placeholder {
+      color: tomato;
+  }
 }

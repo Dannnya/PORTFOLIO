@@ -8,8 +8,17 @@ export const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset, setValue, trigger } = useForm({
     mode: 'onBlur'
+  });
+
+   const [focusedField, setFocusedField] = useState(null);
+
+    const [placeholders, setPlaceholders] = useState({
+    firstName: 'Name',
+    email: 'Email',
+    subject: 'Subject',
+    message: 'Message'
   });
 
   const displayMessage = (name) => {
@@ -25,50 +34,102 @@ export const ContactForm = () => {
     });
   };
 
+  const handleBlur = async (name) => {
+    const valid = await trigger(name);
+    setFocusedField(null);
+    if (!valid) {
+      setValue(name, '');
+      setPlaceholders(prev => ({
+        ...prev,
+        [name]: errors[name]?.message || 'This is requider field !'
+      }));
+    };
+  };
+
+  const handleFocus = (name, defaultPlaceholder) => {
+    setFocusedField(name);
+    setPlaceholders(prev => ({
+      ...prev,
+      [name]: defaultPlaceholder
+    }));
+  };
+
+
   const onSubmit = (data) => {
     displayMessage(data.firstName);
     console.log((JSON.stringify(data)));
     reset();
   };
-  
-  const handleChange = e => {
-    const { name, value } = e.target;
-    
-    switch (name) {
-      case 'firstName':
-        setUser(value);
-        break;
-      case 'email':
-        setEmail(value);
-        break;
-      case 'subject':
-        setSubject(value);
-        break;
-      case 'message':
-        setMessage(value);
-        break;
-      default:
-        return;
-    }
-  };
 
   return (
     <form className="contact-form" autoComplete="off" onSubmit={ handleSubmit( onSubmit ) }>
       <div className="container">
-        <div className="input-row">
+        <div className="input-row">       
           <input
             type="text"
-            placeholder="Name"
-            className="form-input"
-            onChange={handleChange}
-            // value= { user }
-            name="firstName"
-            {...register('firstName', { required: 'This is required field ', minLength: { value: 5, message: 'Minimum length is 5 symbols' } })}
+            className={`form-input ${errors.firstName && !focusedField ? 'error-placeholder' : ''}`}
+            placeholder={placeholders.firstName}
+            {...register('firstName', {
+              required: 'This field is required',
+              minLength: { value: 3, message: 'Minimum length is 3 symbols' }
+            })}
+            onBlur={() => handleBlur('firstName')}
+            onFocus={() => handleFocus('firstName', 'Name')}
           />
-          <div style={{ color: "tomato" }}>
-            {errors?.firstName && <p>{errors?.firstName?.message || "Error!"}</p>}
-          </div>
           <input
+            type="email"
+            className={`form-input ${errors.email && !focusedField ? 'error-placeholder' : ''}`}
+            placeholder={placeholders.email}
+            {...register('email', { required: 'This field is required' })}
+            onBlur={() => handleBlur('email')}
+            onFocus={() => handleFocus('email', 'Email')}
+          />
+        </div>
+        <input
+          type="text"
+          className={`form-input ${errors.subject && !focusedField ? 'error-placeholder' : ''}`}
+          placeholder={placeholders.subject}
+          {...register('subject', { required: 'This field is required' })}
+          onBlur={() => handleBlur('subject')}
+          onFocus={() => handleFocus('subject', 'Subject')}
+        />
+        <textarea
+          className={`form-textarea ${errors.message && !focusedField ? 'error-placeholder' : ''}`}
+          placeholder={placeholders.message}
+          {...register('message', { required: 'This field is required' })}
+          onBlur={() => handleBlur('message')}
+          onFocus={() => handleFocus('message', 'Message')}
+        />
+      </div>
+      <button
+        type="submit"
+        className="form-button"
+      >
+        Submit
+      </button>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={true}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+    </form>
+  )
+
+
+
+
+
+
+
+
+            {/* <input
             type="email"
             placeholder="Email"
             className="form-input"
@@ -92,25 +153,13 @@ export const ContactForm = () => {
           value={message}
           name="message" >
         </textarea>
-      </div>
-      <button
-        type="submit"
-        className="form-button"
-      >
-        Submit
-      </button>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={true}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-    </form>
-  )
+      </div> */}
 };
+
+
+
+
+
+
+
+
