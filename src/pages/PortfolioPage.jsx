@@ -1,10 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
+import { useForm } from 'react-hook-form';
 
 export const PortfolioPage = () => {
   const [time, setTime] = useState(() => new Date());
   const [count, setCount] = useState(0);
   const intervalId = useRef(null);
   const prevCount = useRef(null);
+  const { register, handleSubmit, formState: { errors }, } = useForm({
+      mode: 'onBlur'
+  });
+    
+  const onSubmit = data => {
+    alert(JSON.stringify(data));
+  }
 
   useEffect( () => {
     intervalId.current = setInterval(() => {
@@ -34,7 +42,20 @@ export const PortfolioPage = () => {
 
       <h1>{count}</h1>
       <button onClick={() => setCount( count + 1 )}> Increment </button>
-      <button onClick={() => setCount( count - 1 )}> Decrement </button>
+      <button onClick={() => setCount(count - 1)}> Decrement </button>
+      <br/>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <label>
+          Fist Name: 
+        <input
+        {...register('firstName', { required: 'This is required field ', minLength: { value: 5, message: 'Minimum length is 5 symbols' } })}
+          />
+          <div style={{ color:"tomato" }}>
+            {errors?.firstName && <p>{errors?.firstName?.message || "Error!"}</p>}
+          </div>
+        </label> <br/>
+        <button>Click</button>
+      </form>
     </div>
   )
 };

@@ -11,7 +11,7 @@ export const ContactPage = () => {
         <p className='main-text'>
           Have a project in mind or just want to connect? <br /> 
           I'm always open to discussing new opportunities, collaborations, or exciting ideas in  web development. <br />
-          Let’s build something great together
+          Let’s build something great together ! 
         </p>
         <div className="contact-card">
           <div className="icon-container">

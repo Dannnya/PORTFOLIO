@@ -1,15 +1,19 @@
 import { useState } from 'react'; 
 import '../scss/Contact/ContactForm.scss'; 
-import { ToastContainer, toast } from "react-toastify"; 
+import { ToastContainer, toast } from "react-toastify";
+import { useForm } from 'react-hook-form';
 
 export const ContactForm = () => {
   const [user, setUser] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    mode: 'onBlur'
+  });
 
-  const displayMessage = () => {
-    toast(`Thank you ${ user } for your feedback !`, {
+  const displayMessage = (name) => {
+    toast(`Thank you ${ name } for your feedback !`, {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -19,13 +23,19 @@ export const ContactForm = () => {
       progress: undefined,
       theme: "dark",
     });
-  }
+  };
+
+  const onSubmit = (data) => {
+    displayMessage(data.firstName);
+    console.log((JSON.stringify(data)));
+    reset();
+  };
   
   const handleChange = e => {
     const { name, value } = e.target;
     
     switch (name) {
-      case 'user':
+      case 'firstName':
         setUser(value);
         break;
       case 'email':
@@ -43,7 +53,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" autoComplete="off" onSubmit={ (e) => e.preventDefault() }>
+    <form className="contact-form" autoComplete="off" onSubmit={ handleSubmit( onSubmit ) }>
       <div className="container">
         <div className="input-row">
           <input
@@ -51,9 +61,13 @@ export const ContactForm = () => {
             placeholder="Name"
             className="form-input"
             onChange={handleChange}
-            value={user}
-            name="user"
+            // value= { user }
+            name="firstName"
+            {...register('firstName', { required: 'This is required field ', minLength: { value: 5, message: 'Minimum length is 5 symbols' } })}
           />
+          <div style={{ color: "tomato" }}>
+            {errors?.firstName && <p>{errors?.firstName?.message || "Error!"}</p>}
+          </div>
           <input
             type="email"
             placeholder="Email"
@@ -82,7 +96,6 @@ export const ContactForm = () => {
       <button
         type="submit"
         className="form-button"
-        onClick={ displayMessage }
       >
         Submit
       </button>
