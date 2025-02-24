@@ -1,20 +1,20 @@
 import { useState } from 'react'; 
 import '../scss/Contact/ContactForm.scss'; 
 import { ToastContainer, toast } from "react-toastify";
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'; 
 
 export const ContactForm = () => {
-  const [user, setUser] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  // const [user, setUser] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [subject, setSubject] = useState('');
+  // const [message, setMessage] = useState('');
   const { register, handleSubmit, formState: { errors }, reset, setValue, trigger } = useForm({
     mode: 'onBlur'
   });
 
-   const [focusedField, setFocusedField] = useState(null);
+  const [focusedField, setFocusedField] = useState(null);
 
-    const [placeholders, setPlaceholders] = useState({
+  const [placeholders, setPlaceholders] = useState({
     firstName: 'Name',
     email: 'Email',
     subject: 'Subject',
@@ -22,7 +22,7 @@ export const ContactForm = () => {
   });
 
   const displayMessage = (name) => {
-    toast(`Thank you ${ name } for your feedback !`, {
+    toast(`Thank you ${name} for your feedback !`, {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -41,9 +41,9 @@ export const ContactForm = () => {
       setValue(name, '');
       setPlaceholders(prev => ({
         ...prev,
-        [name]: errors[name]?.message || 'This is requider field !'
+        [name]: errors[name]?.message || 'This field is required'
       }));
-    };
+    }
   };
 
   const handleFocus = (name, defaultPlaceholder) => {
@@ -62,9 +62,9 @@ export const ContactForm = () => {
   };
 
   return (
-    <form className="contact-form" autoComplete="off" onSubmit={ handleSubmit( onSubmit ) }>
+    <form className="contact-form" autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
       <div className="container">
-        <div className="input-row">       
+        <div className="input-row">
           <input
             type="text"
             className={`form-input ${errors.firstName && !focusedField ? 'error-placeholder' : ''}`}
@@ -121,45 +121,4 @@ export const ContactForm = () => {
       />
     </form>
   )
-
-
-
-
-
-
-
-
-            {/* <input
-            type="email"
-            placeholder="Email"
-            className="form-input"
-            onChange={handleChange}
-            value={email}
-            name="email"
-          />
-        </div>
-        <input
-          type="text"
-          placeholder="Subject"
-          className="form-input"
-          onChange={handleChange}
-          value={subject}
-          name="subject"
-        />
-        <textarea
-          placeholder="Message"
-          className="form-textarea"
-          onChange={handleChange}
-          value={message}
-          name="message" >
-        </textarea>
-      </div> */}
 };
-
-
-
-
-
-
-
-
