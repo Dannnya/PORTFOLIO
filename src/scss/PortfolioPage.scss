@@ -1,0 +1,31 @@
+.container-portfolio {
+    .title-container {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+
+
+        .title {
+            text-align: center;
+        }
+    }
+
+    .example-box {
+        background-color: #736677;
+        position: fixed;
+        border-radius: 19px;
+        margin: 30px 50px 50px 100px;
+
+        .preview {
+            border-radius: 19px
+        }
+        
+    }
+
+    div > a {
+        display: inline-block;
+        width: auto;
+        padding: 10px 10px 0 10px;
+        text-align: center;
+    }
+}
